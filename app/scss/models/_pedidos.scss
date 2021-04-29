@@ -1,0 +1,72 @@
+.container-pedidos {
+    margin-top: 200px;
+    color: #fff;
+
+    .card-pedidos {
+        border-radius: 8px;
+        
+
+        .pedido_group {
+            border: 1px solid #aeabaa2e;
+            border-radius: 4px;
+            padding: 35px 25px;
+
+            .info_geral {
+                padding: 10px 0;
+
+                .status {
+                    background: $success;
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    padding: 15px;
+                    border-radius: 8px;
+                    display: inline-block;
+                }
+
+                .detalhes_basicos {
+                    display: inline-block;
+                    padding: 0 120px 0 25px;
+
+                    &.preco {
+                        vertical-align: inherit;
+                        width: 310px;
+                        p {
+                            display: block;
+
+                            margin: 0;
+                            &:last-child {
+                                color: #AEABAA;
+                            }
+                        }
+                    }
+                    // grupo de p's
+                    .groupP{
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-left: 20px;
+                    }
+
+                    vertical-align: middle;
+
+                    p {
+                        display: inline;
+                        color: $text-color;
+                    }
+
+                    span {
+                        display: block;
+                    }
+                   
+                }
+
+                .ver_mais {
+                    display: inline-block;
+                    .arrow{
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

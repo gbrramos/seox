@@ -1,0 +1,127 @@
+// Mixins
+
+$browser-context: $font-size-base; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Position center for vertical and horizontal items
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Helpers - margins and paddings
+@mixin space($type: margin, $direction: all, $amount:$medium){
+	@if $type == padding {
+		@if $direction == all{
+			padding: $amount;
+		} @else if $direction == top {
+			padding-top:$amount
+		} @else if $direction == left {
+			padding-left:$amount
+		} @else if $direction == right {
+			padding-right:$amount
+		} @else {
+			padding-bottom:$amount
+		}
+	} @else {
+		@if $direction == all{
+			margin: $amount;
+		} @else if $direction == top {
+			margin-top:$amount
+		} @else if $direction == left {
+			margin-left:$amount
+		} @else if $direction == right {
+			margin-right:$amount
+		} @else {
+			margin-bottom:$amount
+		}
+	}
+}
+
+// Position center for vertical and horizontal items
+@mixin centre($axis: "both"){
+  position:absolute;
+  @if $axis == "y"{
+    top:50%;
+    transform: translateY(-50%);
+  }
+  @if $axis == "x"{
+    left:50%;
+    transform: translateX(-50%);
+  }
+  @if $axis == "both"{
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+       -o-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//  RESPONSIVE
+////////////////////////////////////////////////////////////////////////////////
+$breakpoints: (
+    "fold":         347px,
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "boot-md":      992px,
+    "tablet-wide":  1025px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+
+.bg{
+    &.rotate {
+        // Posicionamento e posição
+        transform: rotate(10deg);
+        
+    }
+
+&.bg-pink {
+    // Background listrado
+    background: repeating-linear-gradient(180deg,
+            $rosa,
+            $rosa 18px,
+            $rosa_opacity 18px,
+            $rosa_opacity 19px);
+        position: absolute;
+        z-index: -1;
+        width: 110vw;
+        height: 100vh;
+        margin-left: -60px;
+        margin-top: -180px;
+
+    .escrita {
+        // Texto
+        position: absolute;
+        font-weight: bolder;
+        right: 4%;
+        top: 20%;
+        font-size: 128px;
+        color: transparent;
+        transform: rotate(-10deg);
+        // Contorno do texto
+        -webkit-text-stroke-width: 0.1px;
+        -webkit-text-stroke-color: #fff;
+    }
+}
+
+&.bg-white {
+    // Background listrado
+    background: repeating-linear-gradient(180deg,
+            $branco,
+            $branco 18px,
+            rgba(#FF7C76 ,0.2) 18px,
+            rgba(#FF7C76 ,0.2) 19px);
+            position: absolute;
+            z-index: -2;
+            width: 100vw;
+            height: 100vh;
+            top: 300px;
+            left: -100px;
+   
+}
+
+}

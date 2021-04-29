@@ -1,0 +1,196 @@
+// Helpers - margins and paddings
+
+$zero: 0;
+$xs: 5px;
+$sm: 10px;
+$md: 20px;
+$lg: 30px;
+$xlg: 40px;
+
+
+/* --------- All --------- */
+.m-all-0 { @include space(margin, all, $zero); }
+.m-all-xs { @include space(margin, all, $xs); }
+.m-all-sm { @include space(margin, all, $sm); }
+.m-all-md { @include space(margin, all, $md); }
+.m-all-lg { @include space(margin, all, $lg); }
+
+/* --------- Top --------- */
+.m-top-0 { @include space(margin, top, $zero); }
+.m-top-xs { @include space(margin, top, $xs); }
+.m-top-sm { @include space(margin, top, $sm !important); }
+.m-top-md { @include space(margin, top, $md !important); }
+.m-top-lg { @include space(margin, top, $lg); }
+
+/* --------- Right --------- */
+.m-right-0 { @include space(margin, right, $zero); }
+.m-right-xs { @include space(margin, right, $xs); }
+.m-right-sm { @include space(margin, right, $sm); }
+.m-right-md { @include space(margin, right, $md); }
+.m-right-lg { @include space(margin, right, $lg); }
+
+/* --------- Bottom --------- */
+.m-bottom-0 { @include space(margin, bottom, $zero); }
+.m-bottom-xs { @include space(margin, bottom, $xs !important); }
+.m-bottom-sm { @include space(margin, bottom, $sm); }
+.m-bottom-md { @include space(margin, bottom, $md !important); }
+.m-bottom-lg { @include space(margin, bottom, $lg); }
+
+/* --------- Left --------- */
+.m-left-0 { @include space(margin, left, $zero); }
+.m-left-xs { @include space(margin, left, $xs); }
+.m-left-sm { @include space(margin, left, $sm); }
+.m-left-md { @include space(margin, left, $md); }
+.m-left-lg { @include space(margin, left, $lg); }
+
+
+/* --------- Padding --------- */
+
+/* --------- All --------- */
+.p-all-0 { @include space(padding, all, $zero); }
+.p-all-xs { @include space(padding, all, $xs); }
+.p-all-sm { @include space(padding, all, $sm); }
+.p-all-md { @include space(padding, all, $md); }
+.p-all-lg { @include space(padding, all, $lg); }
+.p-all-xlg { @include space(padding, all, $xlg); }
+
+/* --------- Top --------- */
+.p-top-0 { @include space(padding, top, $zero); }
+.p-top-xs { @include space(padding, top, $xs); }
+.p-top-sm { @include space(padding, top, $sm !important); }
+.p-top-md { @include space(padding, top, $md !important); }
+.p-top-lg { @include space(padding, top, $lg); }
+.p-top-xlg { @include space(padding, top, $xlg); }
+
+/* --------- Right --------- */
+.p-right-0 { @include space(padding, right, $zero); }
+.p-right-xs { @include space(padding, right, $xs); }
+.p-right-sm { @include space(padding, right, $sm); }
+.p-right-md { @include space(padding, right, $md); }
+.p-right-lg { @include space(padding, right, $lg); }
+.p-right-xlg { @include space(padding, right, $xlg); }
+
+/* --------- Bottom --------- */
+.p-bottom-0 { @include space(padding, bottom, $zero); }
+.p-bottom-xs { @include space(padding, bottom, $xs !important); }
+.p-bottom-sm { @include space(padding, bottom, $sm); }
+.p-bottom-md { @include space(padding, bottom, $md !important); }
+.p-bottom-lg { @include space(padding, bottom, $lg); }
+.p-bottom-xlg { @include space(padding, bottom, $xlg); }
+
+/* --------- Left --------- */
+.p-left-0 { @include space(padding, left, $zero); }
+.p-left-xs { @include space(padding, left, $xs); }
+.p-left-sm { @include space(padding, left, $sm); }
+.p-left-md { @include space(padding, left, $md); }
+.p-left-lg { @include space(padding, left, $lg); }
+.p-left-xlg { @include space(padding, left, $xlg); }
+
+/* --------- Left --------- */
+
+.p-xs-all-0{@include mq(tablet, max){padding: 0 !important;}}
+.p-xs-left-0{@include mq(tablet, max){padding-left: 0 !important;}}
+.p-xs-right-0{@include mq(tablet, max){padding-right: 0 !important;}}
+.p-xs-top-0{@include mq(tablet, max){padding-top: 0 !important;}}
+.p-xs-bottom-0{@include mq(tablet, max){padding-bottom: 0 !important;}}
+.p-xs-all-0{@include mq(tablet, max){padding: 0 !important;}}
+
+.p-sm-all-0{@media screen and (min-width: 768px) and (max-width: 992px)  {padding: 0 !important;}}
+.p-sm-left-0{@media screen and (min-width: 768px) and (max-width: 992px)  {padding-left: 0 !important;}}
+.p-sm-right-0{@media screen and (min-width: 768px) and (max-width: 992px) {padding-right: 0 !important;}}
+.p-sm-top-0{@media screen and (min-width: 768px) and (max-width: 992px) {padding-top: 0 !important;}}
+.p-sm-bottom-0{@media screen and (min-width: 768px) and (max-width: 992px) {padding-bottom: 0 !important;}}
+
+.p-sm-all-0{@media screen and (min-width: 992px) and (max-width: 1200px)  {padding: 0 !important;}}
+.p-md-left-0{@media screen and (min-width: 992px) and (max-width: 1200px)  {padding-left: 0 !important;}}
+.p-md-right-0{@media screen and (min-width: 992px) and (max-width: 1200px) {padding-right: 0 !important;}}
+.p-md-top-0{@media screen and (min-width: 992px) and (max-width: 1200px) {padding-top: 0 !important;}}
+.p-md-bottom-0{@media screen and (min-width: 992px) and (max-width: 1200px) {padding-bottom: 0 !important;}}
+
+.p-sm-all-0{@media screen and (min-width: 1200px) {padding: 0 !important;}}
+.p-lg-left-0{@media screen and (min-width: 1200px)  {padding-left: 0 !important;}}
+.p-lg-right-0{@media screen and (min-width: 1200px) {padding-right: 0 !important;}}
+.p-lg-top-0{@media screen and (min-width: 1200px) {padding-top: 0 !important;}}
+.p-lg-bottom-0{@media screen and (min-width: 1200px) {padding-bottom: 0 !important;}}
+
+
+.b-r-0 {
+  border-right: 0 !important;
+}
+.btn-flat{
+	border-radius:0 !important;
+}
+// Equal height
+.equal, .equal > div[class*='col-'] {
+  @media screen and (min-width: 992px) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+  }
+}
+
+.bg-amarelo{
+  background:$amarelo;
+  &.btn{
+    color:#000;
+  }
+  &:hover{
+    background:$bg-dark;
+    color:#fff;
+  }
+}
+.bg-laranja{
+  background:$laranja;
+  &.btn{
+    color:#fff;
+  }
+}
+.bg-azul{
+  background:$azul;
+  &.btn{
+    color:#fff;
+  }
+}
+.bg-verde{
+  background:$verde;
+  &.btn{
+    color:#fff;
+  }
+}
+.bg-cinza-escuro{
+  background:$cinza-escuro;
+  &.btn{
+    color:#fff;
+  }
+}
+
+.bg-preto{
+  background:$bg-dark;
+  &.btn{
+    color:#fff;
+  }
+  color: #fff;
+}
+.text-amarelo{
+     color:$amarelo; 
+}
+.text-laranja{
+     color:$laranja; 
+}
+.bg-ouro{
+ background:$ouro;
+}
+.text-rosa{
+  color: $rosa;
+}
+
+.text-verde{
+  color: $success;
+}
+
+.bg-purple{
+  background: $purple;
+ }

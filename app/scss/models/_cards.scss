@@ -1,0 +1,64 @@
+.card {
+    &.card-bg{
+        background: #fff;
+    }
+    &.card-menu {
+        border-radius: 5px;
+        position: fixed;
+        margin-top: 60px;
+        padding: 20px 35px 60px 35px;
+        .profile {
+            text-align: center;
+            // Imagem Perfil
+            .pic {
+                margin-bottom: 15px;
+                position: relative;
+                .btn-camera{
+                  img{
+                      width: 15px;
+                      position: absolute;
+                      bottom: -10px;
+                  }  
+                }
+                img {
+                    width: 30px;
+                    display: inline-block;
+                }
+            }
+            // Nome Perfil
+            .name {
+                font-size: 16px;
+                color: $text-color
+            }
+        }
+        // Menu Card
+        .menu {
+            margin-top: 30px;
+
+            ul {
+                li {
+                    padding: 15px 20px;
+
+                    a {
+                        color: $text-color;
+                    }
+
+                    img {
+                        margin-right: 20px;
+                    }
+
+                    &:first-child {
+                        border: 1px solid rgba(243, 232, 231, 0.5);
+                        border-radius: 8px;
+                    }
+
+                    &:last-child {
+                        a {
+                            color: $text-color-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

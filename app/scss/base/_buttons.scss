@@ -1,0 +1,36 @@
+// Colors
+.btn-blue{
+    background-color: $azul;
+    color: #fff;
+    &:hover{
+        background-color: darken($color: $azul, $amount: 7);
+        color: #fff !important;
+    }
+}
+
+.btn-green{
+    background-color: $verde;
+    color: #fff;
+    &:hover{
+        background-color: darken($color: $verde, $amount: 7);
+        color: #fff !important;
+    }
+}
+
+
+// Widths
+.btn-50{
+    max-width: 50%;
+    display: inline-block;
+    padding: 1em 5em;
+}
+
+// Complete Styles
+
+.button_search{
+    position: absolute;
+    border: 0;
+    background: transparent;
+    bottom: 8px;
+    right: 18px;
+}

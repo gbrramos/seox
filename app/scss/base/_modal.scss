@@ -1,0 +1,70 @@
+//------------------------------------------------------------//
+//------ MODAL
+//------------------------------------------------------------//
+
+$modal-inner-padding: 25px !default;
+$modal-title-padding: 20px !default;
+$modal-title-line-height: 30px !default;
+$modal-header-border-color: rgba(229, 229, 229, 1) !default;
+$modal-footer-border-color: $modal-header-border-color !default;
+$modal-backdrop-opacity: .5 !default;
+$modal-backdrop-bg: rgba(255, 255, 255, 1) !default;
+$modal-xs: 300px !default;
+$modal-sm: 450px !default;
+$modal-md: 640px !default;
+$modal-lg: 920px !default;
+$modal-xlg: 990px !default;
+
+.modal-backdrop {
+  z-index: 4;
+}
+
+.modal-dialog {
+  z-index: 5;
+
+  &.modal-lg {
+    @media screen and (max-width: $tablet) {
+      width: 95%;
+      margin: 10px auto;
+    }
+
+    @media (min-width: $tablet) and (max-width: $tablet-landscape) {
+      width: 90%;
+      margin: 10px auto;
+  	}
+  }
+
+  &.modal-xlg {
+    width: $modal-xlg;
+
+    @media screen and (max-width: $tablet) {
+      width: 95%;
+      margin: 10px auto;
+    }
+
+    @media (min-width: $tablet) and (max-width: $tablet-landscape) {
+      width: 90%;
+      margin: 10px auto;
+    }
+  }
+}
+
+.modal-header {
+  .close {
+    padding: 0 10px;
+  }
+}
+
+.modal-content {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+  border: 0;
+}
+
+.modal-repair-team {
+  max-width: 420px;
+}
+
+.modal-xs-overflow {
+  max-height: 320px;
+  overflow: auto;
+}

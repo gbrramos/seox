@@ -1,0 +1,32 @@
+.links_group {
+    display: inline-block;
+
+    a {
+        text-decoration: none;
+    }
+
+   
+
+    .link_pink {
+        margin: 0 20px;
+        border-radius: 100%;
+
+        &.bg {
+            padding: 5px;
+            background-color: rgba($rosa, 0.1);
+
+            img {
+                margin-left: 3px;
+                width: 14px;
+            }
+        }
+    }
+
+    span.link_gray {
+        margin-left: 20px;
+    }
+}
+
+.link_gray {
+    color: $cinza-text;
+}
