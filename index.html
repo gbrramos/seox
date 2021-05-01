@@ -13,7 +13,7 @@
     <div id="tudo">
         <header id="header">
             <div class="control_950">
-                <div id="nav-icon2" target="#menu">
+                <div id="nav-icon2" target="#menu" onclick="menu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,7 +54,7 @@
         <!-- Container Conteudo -->
         <div class="container">
             <div class="col-sm-3">
-                <div class="card card-bg card-menu">
+                <div id="menu" class="card card-bg card-menu">
                     <!-- Profile: Name and Image -->
 
                     <div class="profile">
@@ -89,7 +89,7 @@
                     <div class="card card-bg card-pedidos">
                         <div class="pedido_group item">
                             <div class="info_geral">
-                                <div class="status">
+                                <div class="status entregue">
                                     <img src="./dist/img/card-pedidos/correct.svg" alt="">
                                 </div>
                                 <div class="detalhes_basicos">
@@ -111,31 +111,782 @@
                                         <img src="./dist/img/card-pedidos/up.svg" class="arrow" alt="">
                                     </a>
                                 </div>
-                                <div class="collapse" id="pedido1">
-                                    <div class="card card-body">
-                                        <span style="color: #000">Some placeholder content for the collapse component. This panel is hidden
-                                            by
-                                            default
-                                            but revealed when the user activates the relevant trigger.
-                                        </span>
+                            </div>
+                            <div class="collapse" id="pedido1">
+                                <div class="card card-body">
+                                    <div class="frete_details">
+                                        <div class="frete_item icon">
+                                            <img src="./dist/img/car.svg" alt="">
+                                        </div>
+                                        <div class="frete_item valor">
+                                            <span>Frete:</span>
+                                            <p>R$ 35,10 <span>via SEDEX</span></p>
+                                        </div>
+                                        <div class="frete_item pay">
+                                            <span>Forma de pagamento:</span>
+                                            <p>Cartão de Crédito</p>
+                                        </div>
+                                        <div class="frete_item entrega">
+                                            <span>Entregue dia:</span>
+                                            <p class="text-verde">09/fev</p>
+                                        </div>
+                                        <div class="frete_item plus">
+                                            <a href="">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1V15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M1 8H15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <ul>
+                                            <li>
+                                                <span>Pedido recebido</span>
+                                                <p>03/fev 09:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Pagamento aprovado</span>
+                                                <p>03/fev 14:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Em separação</span>
+                                                <p>06/fev 09:13</p>
+                                            </li>
+                                            <li>
+                                                <span>Em transporte</span>
+                                                <p>08/fev 21:45</p>
+                                            </li>
+                                            <li>
+                                                <span>Pedido entregue</span>
+                                                <p>09/fev 00:00</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="produtos">
+                                        <ul>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Neutro Rosado</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Preto</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        
+                        <div class="pedido_group item">
+                            <div class="info_geral">
+                                <div class="status caminho">
+                                    <img src="./dist/img/car-white.svg" alt="">
+                                </div>
+                                <div class="detalhes_basicos">
+                                    <img src="./dist/img/card-profile/box.svg" alt="">
+                                    <p>Pedido #15324</p>
+                                    <span class="text-caminho">Seu pedido está a caminho</span>
+                                </div>
+                                <div class="detalhes_basicos preco">
+                                    <img src="./dist/img/card-pedidos/ball.svg" alt="">
+                                    <div class="groupP">
+                                        <p>R$ 70,00</p>
+                                        <p>01 item</p>
+                                    </div>
+                                </div>
+                                <div class="ver_mais">
+                                    <a class="link_gray" data-bs-toggle="collapse" href="#pedido2" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Mais Detalhes
+                                        <img src="./dist/img/card-pedidos/up.svg" class="arrow" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="collapse" id="pedido2">
+                                <div class="card card-body">
+                                    <div class="frete_details">
+                                        <div class="frete_item icon">
+                                            <img src="./dist/img/car.svg" alt="">
+                                        </div>
+                                        <div class="frete_item valor">
+                                            <span>Frete:</span>
+                                            <p>R$ 35,10 <span>via SEDEX</span></p>
+                                        </div>
+                                        <div class="frete_item pay">
+                                            <span>Forma de pagamento:</span>
+                                            <p>Cartão de Crédito</p>
+                                        </div>
+                                        <div class="frete_item entrega">
+                                            <span>Entregue dia:</span>
+                                            <p class="text-verde">09/fev</p>
+                                        </div>
+                                        <div class="frete_item plus">
+                                            <a href="">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1V15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M1 8H15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <ul>
+                                            <li>
+                                                <span>Pedido recebido</span>
+                                                <p>03/fev 09:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Pagamento aprovado</span>
+                                                <p>03/fev 14:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Em separação</span>
+                                                <p>06/fev 09:13</p>
+                                            </li>
+                                            <li>
+                                                <span>Em transporte</span>
+                                                <p>08/fev 21:45</p>
+                                            </li>
+                                            <li>
+                                                <span>Pedido entregue</span>
+                                                <p>09/fev 00:00</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="produtos">
+                                        <ul>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Neutro Rosado</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Preto</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pedido_group item">
+                            <div class="info_geral">
+                                <div class="status separacao">
+                                    <img src="./dist/img/box-white.svg" alt="">
+                                </div>
+                                <div class="detalhes_basicos">
+                                    <img src="./dist/img/card-profile/box.svg" alt="">
+                                    <p>Pedido #16432</p>
+                                    <span class="text-separacao">Seu pedido está em separação</span>
+                                </div>
+                                <div class="detalhes_basicos preco">
+                                    <img src="./dist/img/card-pedidos/ball.svg" alt="">
+                                    <div class="groupP">
+                                        <p>R$ 800,00</p>
+                                        <p>01 item</p>
+                                    </div>
+                                </div>
+                                <div class="ver_mais">
+                                    <a class="link_gray" data-bs-toggle="collapse" href="#pedido3" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Mais Detalhes
+                                        <img src="./dist/img/card-pedidos/up.svg" class="arrow" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="collapse" id="pedido3">
+                                <div class="card card-body">
+                                    <div class="frete_details">
+                                        <div class="frete_item icon">
+                                            <img src="./dist/img/car.svg" alt="">
+                                        </div>
+                                        <div class="frete_item valor">
+                                            <span>Frete:</span>
+                                            <p>R$ 35,10 <span>via SEDEX</span></p>
+                                        </div>
+                                        <div class="frete_item pay">
+                                            <span>Forma de pagamento:</span>
+                                            <p>Cartão de Crédito</p>
+                                        </div>
+                                        <div class="frete_item entrega">
+                                            <span>Entregue dia:</span>
+                                            <p class="text-verde">09/fev</p>
+                                        </div>
+                                        <div class="frete_item plus">
+                                            <a href="">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1V15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M1 8H15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <ul>
+                                            <li>
+                                                <span>Pedido recebido</span>
+                                                <p>03/fev 09:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Pagamento aprovado</span>
+                                                <p>03/fev 14:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Em separação</span>
+                                                <p>06/fev 09:13</p>
+                                            </li>
+                                            <li>
+                                                <span>Em transporte</span>
+                                                <p>08/fev 21:45</p>
+                                            </li>
+                                            <li>
+                                                <span>Pedido entregue</span>
+                                                <p>09/fev 00:00</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="produtos">
+                                        <ul>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Neutro Rosado</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Preto</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pedido_group item">
+                            <div class="info_geral">
+                                <div class="status aprovado">
+                                    <img src="./dist/img/like-white.svg" alt="">
+                                </div>
+                                <div class="detalhes_basicos">
+                                    <img src="./dist/img/card-profile/box.svg" alt="">
+                                    <p>Pedido #36597</p>
+                                    <span class="text-aprovado">O pagamento foi aprovado!</span>
+                                </div>
+                                <div class="detalhes_basicos preco">
+                                    <img src="./dist/img/card-pedidos/balls.svg" alt="">
+                                    <div class="groupP">
+                                        <p>R$ 1250,00</p>
+                                        <p>02 itens</p>
+                                    </div>
+                                </div>
+                                <div class="ver_mais">
+                                    <a class="link_gray" data-bs-toggle="collapse" href="#pedido4" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Mais Detalhes
+                                        <img src="./dist/img/card-pedidos/up.svg" class="arrow" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="collapse" id="pedido4">
+                                <div class="card card-body">
+                                    <div class="frete_details">
+                                        <div class="frete_item icon">
+                                            <img src="./dist/img/car.svg" alt="">
+                                        </div>
+                                        <div class="frete_item valor">
+                                            <span>Frete:</span>
+                                            <p>R$ 35,10 <span>via SEDEX</span></p>
+                                        </div>
+                                        <div class="frete_item pay">
+                                            <span>Forma de pagamento:</span>
+                                            <p>Cartão de Crédito</p>
+                                        </div>
+                                        <div class="frete_item entrega">
+                                            <span>Entregue dia:</span>
+                                            <p class="text-verde">09/fev</p>
+                                        </div>
+                                        <div class="frete_item plus">
+                                            <a href="">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1V15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M1 8H15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <ul>
+                                            <li>
+                                                <span>Pedido recebido</span>
+                                                <p>03/fev 09:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Pagamento aprovado</span>
+                                                <p>03/fev 14:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Em separação</span>
+                                                <p>06/fev 09:13</p>
+                                            </li>
+                                            <li>
+                                                <span>Em transporte</span>
+                                                <p>08/fev 21:45</p>
+                                            </li>
+                                            <li>
+                                                <span>Pedido entregue</span>
+                                                <p>09/fev 00:00</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="produtos">
+                                        <ul>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Neutro Rosado</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Preto</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pedido_group item">
+                            <div class="info_geral">
+                                <div class="status recebido">
+                                    <img src="./dist/img/loading-white.svg" alt="">
+                                </div>
+                                <div class="detalhes_basicos">
+                                    <img src="./dist/img/card-profile/box.svg" alt="">
+                                    <p>Pedido #64528</p>
+                                    <span class="text-recebido">O pedido foi recebido</span>
+                                </div>
+                                <div class="detalhes_basicos preco">
+                                    <img src="./dist/img/card-pedidos/balls_plus.svg" alt="">
+                                    <div class="groupP">
+                                        <p>R$ 800,00</p>
+                                        <p>03 itens</p>
+                                    </div>
+                                </div>
+                                <div class="ver_mais">
+                                    <a class="link_gray" data-bs-toggle="collapse" href="#pedido5" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Mais Detalhes
+                                        <img src="./dist/img/card-pedidos/up.svg" class="arrow" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="collapse" id="pedido5">
+                                <div class="card card-body">
+                                    <div class="frete_details">
+                                        <div class="frete_item icon">
+                                            <img src="./dist/img/car.svg" alt="">
+                                        </div>
+                                        <div class="frete_item valor">
+                                            <span>Frete:</span>
+                                            <p>R$ 35,10 <span>via SEDEX</span></p>
+                                        </div>
+                                        <div class="frete_item pay">
+                                            <span>Forma de pagamento:</span>
+                                            <p>Cartão de Crédito</p>
+                                        </div>
+                                        <div class="frete_item entrega">
+                                            <span>Entregue dia:</span>
+                                            <p class="text-verde">09/fev</p>
+                                        </div>
+                                        <div class="frete_item plus">
+                                            <a href="">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1V15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M1 8H15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <ul>
+                                            <li>
+                                                <span>Pedido recebido</span>
+                                                <p>03/fev 09:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Pagamento aprovado</span>
+                                                <p>03/fev 14:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Em separação</span>
+                                                <p>06/fev 09:13</p>
+                                            </li>
+                                            <li>
+                                                <span>Em transporte</span>
+                                                <p>08/fev 21:45</p>
+                                            </li>
+                                            <li>
+                                                <span>Pedido entregue</span>
+                                                <p>09/fev 00:00</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="produtos">
+                                        <ul>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Neutro Rosado</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Preto</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pedido_group item">
+                            <div class="info_geral">
+                                <div class="status cancelado">
+                                    <img src="./dist/img/sad-white.svg" alt="">
+                                </div>
+                                <div class="detalhes_basicos">
+                                    <img src="./dist/img/card-profile/box.svg" alt="">
+                                    <p>Pedido #54462</p>
+                                    <span class="text-danger">Seu pedido foi cancelado</span>
+                                </div>
+                                <div class="detalhes_basicos preco">
+                                    <img src="./dist/img/card-pedidos/balls_plus.svg" alt="">
+                                    <div class="groupP">
+                                        <p>R$ 160,00</p>
+                                        <p>03 itens</p>
+                                    </div>
+                                </div>
+                                <div class="ver_mais">
+                                    <a class="link_gray" data-bs-toggle="collapse" href="#pedido6" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Mais Detalhes
+                                        <img src="./dist/img/card-pedidos/up.svg" class="arrow" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="collapse" id="pedido6">
+                                <div class="card card-body">
+                                    <div class="frete_details">
+                                        <div class="frete_item icon">
+                                            <img src="./dist/img/car.svg" alt="">
+                                        </div>
+                                        <div class="frete_item valor">
+                                            <span>Frete:</span>
+                                            <p>R$ 35,10 <span>via SEDEX</span></p>
+                                        </div>
+                                        <div class="frete_item pay">
+                                            <span>Forma de pagamento:</span>
+                                            <p>Cartão de Crédito</p>
+                                        </div>
+                                        <div class="frete_item entrega">
+                                            <span>Entregue dia:</span>
+                                            <p class="text-verde">09/fev</p>
+                                        </div>
+                                        <div class="frete_item plus">
+                                            <a href="">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 1V15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M1 8H15" stroke="#5A4B49" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="timeline">
+                                        <ul>
+                                            <li>
+                                                <span>Pedido recebido</span>
+                                                <p>03/fev 09:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Pagamento aprovado</span>
+                                                <p>03/fev 14:33</p>
+                                            </li>
+                                            <li>
+                                                <span>Em separação</span>
+                                                <p>06/fev 09:13</p>
+                                            </li>
+                                            <li>
+                                                <span>Em transporte</span>
+                                                <p>08/fev 21:45</p>
+                                            </li>
+                                            <li>
+                                                <span>Pedido entregue</span>
+                                                <p>09/fev 00:00</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="produtos">
+                                        <ul>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Neutro Rosado</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+                                            <li>
+                                                <div class="profile_produto">
+                                                    <div class="item foto-name">
+                                                        <img src="./dist/img/01.png" alt="">
+
+                                                    </div>
+                                                    <div class="item list-infos">
+                                                        <div class="name">
+                                                            <p>Elastique</p>
+                                                            <p>R$ 540,00</p>
+                                                        </div>
+                                                        <div class="info">
+                                                            <span>01 unidade</span>
+                                                            <span>Cor: Preto</span>
+                                                            <span>Tamanho: P</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="avaliar float-right"><img src="./dist/img/star.svg"
+                                                        alt=""><span>Avalie este produto</span></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
         <!-- Close Container Conteudo -->
         <footer id="footer">
-
+            <div class="control">
+                <div class="float-left">
+                    <p>Formas de pagamento</p>
+                    <img src="./dist/img/cards.png" alt="">
+                </div>
+                <div class="float-right images">
+                    <img src="./dist/img/secure.svg" alt="">
+                    <img src="./dist/img/reclame-aqui.png" alt="">
+                    <img src="./dist/img/seal.png" alt="">
+                </div>
+                <p class="col-sm-12 sub">Preços e condições de pagamento exclusivos para compras via Internet. Vendas
+                    sujeitas à analise e confirmação de dados. Fica garantida a empresa a eventual retificação das
+                    ofertas e erros de digitação que possam ter sido veiculados, podendo ser estornado a compra.
+                    77.941.490/0225-58 - Gazin Industria e Comercio De Móveis e Eletrodomesticos LTDA - ROD PR 082 SN -
+                    Centro - CEP: 87485000 -</p>
+            </div>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./dist/js/seox.js"></script>
 </body>
 

@@ -1,47 +1,30 @@
-$('#nav-icon2').click(function(){
+$('#nav-icon2').click(function () {
 	var target = $(this).data('alvo');
 	var larguraMenu = $(target).outerWidth();
+	$('nav#menu').toggleClass('open');
+	$(this).toggleClass('open');
+});
 
-	if(window.screen.availWidth >= 1024){
-		if (!$(this).hasClass('open')){	
-		$(target).animate({
-			width:600,
-		},function(){
-					$("#nav-icon2").toggleClass('abrir');	
-				})
+function menu() {
+	width = screen.width;
+	console.log(width);
+	target = document.getElementById('menu');
+	if (width > 769) {
+		testClassTarget = target.matches('.open');
+		if (testClassTarget == true) {
+			target.classList.remove("open");
+			target.style.left = '0px';
+		} else {
+			target.classList.add("open");
+			target.style.left = '-600px';
 		}
-		else{
-			$(target).animate({
-			width:'0',
-		},function(){
-			$("#nav-icon2").toggleClass('abrir');	
-			})
-		}
-		}else{
-			if (!$(this).hasClass('open')){
-			$(target).fadeIn(0);
-			$(target).animate({
-				right:0,
-				opacity:1,
-			},function(){
-						$("#nav-icon2").toggleClass('abrir');	
-					})
-			}
-			else{
-				$(target).animate({
-				right:'-' + larguraMenu,
-				opacity:1,
-			},function(){
-						$("#nav-icon2").toggleClass('abrir');
-						$(target).fadeOut('fast');	
-					})
-			}
-		
-		}
+	}else{
+		target.style.position = 'relative';
+		target.style.left = 'inherit';
+	}
+}
 
-		$('nav#menu').toggleClass('open');
-		$(this).toggleClass('open');
-
-	});
-
-
+function arrow(){
+	t = document.getElementsByClassName('link_gray');
+	console.log(t);
+}

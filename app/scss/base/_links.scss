@@ -29,4 +29,7 @@
 
 .link_gray {
     color: $cinza-text;
+    &:hover{
+        color: $cinza-text;
+    }
 }

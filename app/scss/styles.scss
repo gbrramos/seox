@@ -14,8 +14,11 @@
 @import 'base/header';
 @import 'base/nav_icon';
 @import 'base/links';
+@import 'base/footer';
 
 // Models
+@import 'models/icons';
 @import 'models/bg';
 @import 'models/cards';
 @import 'models/pedidos';
+@import 'models/timeline';

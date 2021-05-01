@@ -1,12 +1,18 @@
+#menu{
+   transition: 0.5s;
+   left: 0px;
+}
+
 .card {
     &.card-bg{
         background: #fff;
     }
     &.card-menu {
         border-radius: 5px;
-        position: fixed;
-        margin-top: 60px;
-        padding: 20px 35px 60px 35px;
+        position: absolute;
+        margin-top: 110px;
+        padding: 20px 35px;
+        width: 270px;
         .profile {
             text-align: center;
             // Imagem Perfil

@@ -1,0 +1,72 @@
+.timeline {
+    margin-top: 90px;
+
+    ul {
+        li {
+            max-width: 70px;
+            display: inline-block;
+            text-align: center;
+            margin: 0 5%;
+            position: relative;
+            font-size: 12px;
+            &:after {
+                position: absolute;
+                height: 2px;
+                width: 220%;
+                background-color: $success;
+                left: 45%;
+                top: -35px;
+                content: '';
+                z-index: 1;
+            }
+
+            &::before {
+                position: absolute;
+                height: 12px;
+                width: 12px;
+                background-color: $success;
+                left: 38%;
+                top: -40px;
+                content: '';
+                z-index: 2;
+                border-radius: 100%;
+            }
+
+            &:last-child {
+                &:after {
+                    width: 40%;
+
+                }
+
+                &:before {
+                    background: url(../img/card-pedidos/correct.svg) $success;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    width: 50px;
+                    height: 50px;
+                    top: -58px;
+                    text-align: center;
+                    padding: 15px;
+                    left: 10px;
+                    border-radius: 8px;
+                    display: inline-block;
+                }
+            }
+
+            // &:first-child {
+            //     &:after {
+            //         width: 50%;
+            //     }
+            // }
+
+            span {
+                color: $cinza-claro2;
+            }
+
+            p {
+                color: $cinza-text;
+                font-size: 10px;
+            }
+        }
+    }
+}

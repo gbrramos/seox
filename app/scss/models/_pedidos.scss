@@ -4,44 +4,40 @@
 
     .card-pedidos {
         border-radius: 8px;
-        
+
 
         .pedido_group {
             border: 1px solid #aeabaa2e;
             border-radius: 4px;
             padding: 35px 25px;
-
+            margin: 10px 0;
             .info_geral {
                 padding: 10px 0;
 
-                .status {
-                    background: $success;
-                    width: 50px;
-                    height: 50px;
-                    text-align: center;
-                    padding: 15px;
-                    border-radius: 8px;
-                    display: inline-block;
-                }
+               
 
                 .detalhes_basicos {
                     display: inline-block;
-                    padding: 0 120px 0 25px;
-
+                    padding: 0  25px;
+                    vertical-align: middle;
+                    width: 270px;
                     &.preco {
                         vertical-align: inherit;
                         width: 310px;
+
                         p {
                             display: block;
 
                             margin: 0;
+
                             &:last-child {
                                 color: #AEABAA;
                             }
                         }
                     }
+
                     // grupo de p's
-                    .groupP{
+                    .groupP {
                         display: inline-block;
                         vertical-align: middle;
                         margin-left: 20px;
@@ -57,13 +53,128 @@
                     span {
                         display: block;
                     }
-                   
+
                 }
 
                 .ver_mais {
                     display: inline-block;
-                    .arrow{
+
+                    .arrow {
                         padding-left: 10px;
+                    }
+                }
+            }
+
+            .produtos {
+                ul {
+                    li {
+                        margin: 10px 0;
+
+                        .profile_produto {
+                            display: inline-block;
+                            max-width: 480px;
+                            .item {
+                                img {
+                                    margin-top: -40px;
+                                }
+
+                                display: inline-block;
+
+                                &.list-infos {
+                                    margin-left: 20px;
+
+                                    .name {
+                                        p {
+                                            &:first-child {
+                                                margin: 0;
+
+                                                &:last-child {
+                                                    color: $cinza-claro2;
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                    .info {
+                                        font-size: 12px;
+
+                                        span {
+                                            border: 1px solid #EFEDED;
+                                            border-radius: 10px;
+                                            padding: 5px;
+
+                                            &:first-child {
+                                                border: 0;
+                                                padding: 0;
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+
+                        }
+
+                        .avaliar {
+                            padding: 30px 70px;
+
+                            img {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .collapse {
+            .frete_details {
+                padding-top: 20px;
+
+                .frete_item {
+                    margin: 0 25px;
+                    display: inline-block;
+
+                    &.icon {
+                        padding: 25px;
+
+                        img {
+                            display: inline-block;
+
+                        }
+                    }
+
+                    span {
+                        color: $cinza-text;
+                    }
+
+                    p {
+                        color: $cinza-claro2;
+
+                        span {
+                            border: 1px solid #EFEDED;
+                            padding: 5px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    &.entrega {
+                        p {
+                            color: $success;
+                        }
+                    }
+
+                    &.plus {
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        padding: 15px;
+                        border-radius: 8px;
+                        border: 1px solid #EFEDED;
+                        vertical-align: top;
                     }
                 }
             }

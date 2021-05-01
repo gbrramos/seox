@@ -12,6 +12,7 @@
 * html #tudo {
   height: 100%;
   min-height: 100%;
+  position: relative;
 }
 
 ul,
@@ -121,6 +122,10 @@ section {
 
 .float-right{
   float: right;
+}
+
+p, span{
+  color: $text-color
 }
 
 #content {
