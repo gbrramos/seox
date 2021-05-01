@@ -1,4 +1,4 @@
-header#header{
+header#header {
     top: 0;
     width: 100%;
     padding: 20px 50px;
@@ -6,23 +6,40 @@ header#header{
     background: #fff;
     z-index: 99;
     // Estilos do nav-icon no arquivo base/_nav_icon
-    
-    .logo{
-        margin: 0 40px 0 60px;
+
+    // include media query: tamanhos => core/mixins 
+    @include mq(tablet, max) {
+        height: 140px;
+    }
+
+    .logo {
         display: inline-block;
-        span{
+        margin: 0 40px 0 60px;
+
+      
+        @include mq (tablet, max) {
+            display: inline;
+        }
+
+        span {
             color: $rosa;
             font-size: 24px;
             font-weight: 700;
         }
     }
-    .input_search{
+
+    .input_search {
         width: 40%;
         margin-right: 20px;
         display: inline-block;
-        input{
-            border-radius: 26px;
+
+        @include mq (tablet, max) {
+            display: inline;
         }
     }
-    
+
+    input {
+        border-radius: 26px;
+    }
+
 }

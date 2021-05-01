@@ -5,7 +5,14 @@
         text-decoration: none;
     }
 
-   
+    @include mq (phablet,max) {
+        position: absolute;
+        text-align: center;
+        margin-top: 20px;
+        left: 15%;
+    }
+
+
 
     .link_pink {
         margin: 0 20px;
@@ -29,7 +36,8 @@
 
 .link_gray {
     color: $cinza-text;
-    &:hover{
+
+    &:hover {
         color: $cinza-text;
     }
 }

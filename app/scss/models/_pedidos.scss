@@ -2,6 +2,12 @@
     margin-top: 200px;
     color: #fff;
 
+    @include mq (tablet, max) {
+        h3 {
+            color: #000;
+        }
+    }
+
     .card-pedidos {
         border-radius: 8px;
 
@@ -11,16 +17,21 @@
             border-radius: 4px;
             padding: 35px 25px;
             margin: 10px 0;
+
             .info_geral {
                 padding: 10px 0;
 
-               
-
                 .detalhes_basicos {
                     display: inline-block;
-                    padding: 0  25px;
+                    padding: 0 25px;
                     vertical-align: middle;
                     width: 270px;
+
+                    @include mq (tablet, max) {
+                        width: 100% !important;
+                        text-align: center;
+                    }
+
                     &.preco {
                         vertical-align: inherit;
                         width: 310px;
@@ -59,6 +70,23 @@
                 .ver_mais {
                     display: inline-block;
 
+                    @include mq (tablet, max) {
+                        display: block;
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+
+                    img {
+                        transition: 0.5s;
+                    }
+
+                    .rotateArrow {
+                        img {
+                            transform: rotateX(180deg);
+                            transition: 0.5s;
+                        }
+                    }
+
                     .arrow {
                         padding-left: 10px;
                     }
@@ -66,13 +94,24 @@
             }
 
             .produtos {
+                @include mq (tablet, max) {
+                    margin-top: 80px;
+                }
+
                 ul {
                     li {
                         margin: 10px 0;
-
+                        @include mq (tablet,max){
+                            margin: 70px 0 0 0;
+                        }
                         .profile_produto {
                             display: inline-block;
                             max-width: 480px;
+
+                            @include mq (tablet, max) {
+                                text-align: center;
+                            }
+
                             .item {
                                 img {
                                     margin-top: -40px;
@@ -99,6 +138,10 @@
                                     .info {
                                         font-size: 12px;
 
+                                        @include mq (tablet, max) {
+                                            max-width: 180px;
+                                        }
+
                                         span {
                                             border: 1px solid #EFEDED;
                                             border-radius: 10px;
@@ -119,6 +162,15 @@
                         .avaliar {
                             padding: 30px 70px;
 
+                            @include mq (tablet, max) {
+                                &.float-right {
+                                    width: 100%;
+                                    float: left;
+                                    padding: 0;
+                                    text-align: center;
+                                }
+                            }
+
                             img {
                                 margin-right: 10px;
                             }
@@ -127,6 +179,28 @@
                 }
             }
 
+            &:not(.entregue) {
+                .frete_item {
+                    margin: 0 20px !important;
+
+                    @include mq (tablet, max) {
+
+                        max-width: 100% !important;
+                    }
+                }
+
+                .frete_details {
+                    .entrega {
+                        background: #EDF0FE;
+                        color: #4C6EF5;
+                        max-width: 170px;
+                        padding: 10px;
+                        vertical-align: super;
+                        border-radius: 4px;
+
+                    }
+                }
+            }
 
         }
 
@@ -137,6 +211,11 @@
                 .frete_item {
                     margin: 0 25px;
                     display: inline-block;
+
+                    @include mq (tablet, max) {
+                        display: block;
+                        text-align: center;
+                    }
 
                     &.icon {
                         padding: 25px;
@@ -175,6 +254,10 @@
                         border-radius: 8px;
                         border: 1px solid #EFEDED;
                         vertical-align: top;
+
+                        @include mq (tablet, max) {}
+
+                        margin: 0 auto !important;
                     }
                 }
             }

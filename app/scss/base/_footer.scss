@@ -20,6 +20,9 @@ footer{
         margin-top: 30px;
         font-size: 10px;
         color: #000;
-
+        @include mq (tablet,max){
+            font-size: 12px;
+            text-align: center;
+        }
     }
 }

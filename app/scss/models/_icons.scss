@@ -6,6 +6,10 @@
         padding: 15px;
         border-radius: 8px;
         display: inline-block;
+        @include mq (tablet,max){
+            margin: 0 auto 30px auto; 
+            display: block;
+        }
         &.entregue {
             background: $success;
         }

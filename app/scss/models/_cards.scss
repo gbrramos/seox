@@ -4,6 +4,7 @@
 }
 
 .card {
+   
     &.card-bg{
         background: #fff;
     }
@@ -13,6 +14,9 @@
         margin-top: 110px;
         padding: 20px 35px;
         width: 270px;
+        @include mq (tablet,max){
+            width: 100%;
+        }
         .profile {
             text-align: center;
             // Imagem Perfil
